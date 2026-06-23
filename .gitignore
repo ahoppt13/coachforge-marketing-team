@@ -1,0 +1,7 @@
+# Secrets — never commit
+.env
+*.key
+config/credentials*
+
+# OS
+.DS_Store
