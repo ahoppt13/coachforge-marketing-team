@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "WebSearch",
+      "WebFetch",
+      "Bash",
+      "mcp__mcp-metricool__get_brands",
+      "mcp__mcp-metricool__get_brands_complete",
+      "mcp__mcp-metricool__get_instagram_posts",
+      "mcp__mcp-metricool__get_instagram_reels",
+      "mcp__mcp-metricool__get_instagram_stories",
+      "mcp__mcp-metricool__get_tiktok_videos",
+      "mcp__mcp-metricool__get_facebook_posts",
+      "mcp__mcp-metricool__get_facebook_reels",
+      "mcp__mcp-metricool__get_youtube_videos",
+      "mcp__mcp-metricool__get_network_competitors",
+      "mcp__mcp-metricool__get_network_competitors_posts",
+      "mcp__mcp-metricool__get_metrics",
+      "mcp__mcp-metricool__get_analytics",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-query-data-sources",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "mcp__claude_ai_Notion__notion-update-page"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "mcp__mcp-metricool__post_schedule_post",
+      "mcp__mcp-metricool__update_schedule_post"
+    ]
+  }
+}

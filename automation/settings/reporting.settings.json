@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-query-data-sources",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "mcp__claude_ai_Notion__notion-update-page"
+    ],
+    "deny": [
+      "mcp__mcp-metricool__post_schedule_post",
+      "mcp__mcp-metricool__update_schedule_post"
+    ]
+  }
+}

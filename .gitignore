@@ -5,3 +5,7 @@ config/credentials*
 
 # OS
 .DS_Store
+
+# Automation run logs (keep the dir, not the logs)
+automation/logs/*
+!automation/logs/.gitkeep

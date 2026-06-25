@@ -1,0 +1,14 @@
+Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattended as the weekly Head of Content. Be autonomous and finish the job; do not ask questions.
+
+1. Read .claude/skills/head-of-content/SKILL.md and follow it exactly.
+2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
+
+Then deliver this week's report:
+- Find THIS week's "Weekly Brief" row (the one the Strategist opened as Draft, whose Date Range covers the posts that ran). Complete that SAME row — do not create a new one. If it is missing, do not fabricate one; note that the Strategist never opened it and report on what exists.
+- Read this week's "Metrics & Trends" (Type=Post metric + Verdict) and the "Content Calendar" rows that reached Status=Published this week.
+- Pick the Top Performer (post + proof number + reusable lesson). Build the Kill List (underperformers + reason + drop/retry). If nothing clearly won, say so — don't force a winner.
+- Fill Top Performer + Kill List, relate the week's posts via Related Content, put a scannable results readout in the page body, set Status=Delivered.
+- Move each Content Calendar row you reported on from Published -> Reported (only ones you actually covered).
+- Never invent a metric, a winner, or a lesson. Thin data = report thin data. Keep the writing in brand voice (UK English, no banned words, no hype).
+
+End with the spoken handoff: week's verdict, Top Performer, Kill List, what feeds next week, data gaps. This run is unattended — report only; do not re-strategise, schedule, or publish.

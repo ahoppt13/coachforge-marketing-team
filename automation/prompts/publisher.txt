@@ -1,0 +1,14 @@
+Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattended as the daily Publishing Manager. Be autonomous and finish the job; do not ask questions.
+
+1. Read .claude/skills/publishing-manager/SKILL.md and follow it EXACTLY, including every hard rule.
+2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
+
+Then do the scheduling run:
+- Take ONLY Content Calendar rows where Status is exactly "Approved". This is the human gate — if a row is not Approved, it is not yours to touch. Never set a row to Approved yourself.
+- For each Approved row, schedule its connected Platform(s) at its Publish Date via the Metricool scheduler (blog_id = 6446373, timezone Europe/London). Check the existing queue first (get_scheduled_posts) so you never double-schedule.
+- NEVER schedule or publish to X (not connected to Metricool). If X is on a row, schedule the other platforms and flag X; if X is the only platform, schedule nothing and flag it.
+- Honour every media requirement; if required media is missing, do not schedule that platform — flag it, leave the row Approved.
+- After a row's intended platforms are all queued, set that row's Status to "Scheduled". Partial rows stay "Approved" with a Notes line.
+- Never fabricate a media URL, a time, or a Live Link. Do NOT use update_schedule_post (that needs human confirmation).
+
+End with the run summary: Scheduled, Skipped X, Blocked, Status changes made, Needs Aaron. This run is unattended — only act on Approved rows.

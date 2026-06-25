@@ -177,6 +177,31 @@ Task:
 
 ---
 
-## What's left after Phase 4
+## Phase 5 — Automation (built)
 
-- **Phase 5 — Automation:** daily cron for the Analyst, weekly cron for the pipeline. Keep the human approval gate.
+Local `launchd` jobs run the pipeline on a schedule — see [`automation/README.md`](automation/README.md).
+Everything is local (the Metricool MCP is a local binary, so cloud routines can't run it).
+
+| Job | When (Europe/London) | Publishes? |
+|---|---|---|
+| `analyst`   | Daily 07:00 | no |
+| `publisher` | Daily 07:30 | yes — **Approved only**, opt-in |
+| `creative`  | Mon 06:30   | no — stops at Approval Queue |
+| `reporting` | Sun 18:00   | no |
+
+```bash
+cd automation
+./install.sh                  # analyst + creative + reporting (nothing publishes)
+./install.sh --with-publisher # also enable real scheduling of Approved rows
+./run-job.sh analyst          # run one by hand; tail logs/analyst-latest.log
+```
+
+The approval gate holds: `creative` stops at `Scripted`, `publisher` only touches
+`Approved` rows and never posts to X, and the non-publishing jobs are denied the
+Metricool scheduler tools outright. You alone move a row to `Approved`.
+
+## What's left
+
+- **Optional:** wake-from-sleep tuning for the Sun 18:00 roll-up (pmset holds one
+  repeating wake; see automation/README.md), and your first supervised
+  `--with-publisher` run before trusting unattended scheduling.

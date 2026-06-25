@@ -1,0 +1,21 @@
+Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattended as the weekly creative chain: Content Strategist -> Ideator -> Scripter, in that order, in one session. Be autonomous and finish the whole chain; do not ask questions. STOP at the Approval Queue — never approve, schedule, or publish anything. Approval is Aaron's alone.
+
+Read config/notion-workspace.md and brand/brand-voice-profile.md once up front.
+
+STEP 1 — Content Strategist.
+- Read .claude/skills/content-strategist/SKILL.md and follow it exactly.
+- Read the last 7-14 days of "Metrics & Trends" + "Competitors" (What's Working).
+- Set this week's content mix (default 7 posts/week, Instagram-first), pillar focus, 2-3 CTAs (UK English, no FOMO/scarcity), and trends to ride.
+- Create ONE "Weekly Brief" row (Status=Draft) with Trends to Ride + Next Week Focus, and the full strategy in the page body. If this week's Draft already exists, update it, don't duplicate.
+
+STEP 2 — Ideator.
+- Read .claude/skills/ideator/SKILL.md and follow it exactly.
+- Use the Weekly Brief you just drafted. Brainstorm 30+ ideas, cut to the 7 best matching the mix, write a strong hook for each.
+- Create 7 "Content Calendar" rows (Status=Idea) with Title, Format, Platform, Pillar, Hook, Publish Date (spread Mon-Sun), Notes (angle + CTA), related to this week's Weekly Brief.
+
+STEP 3 — Scripter.
+- Read .claude/skills/scripter/SKILL.md AND brand/brand-voice-profile.md in full, then follow the skill exactly.
+- For every Status=Idea row you just created, write a full filming-ready script. Create a "Scripts" row (Script Status=Draft, full script in page body, Hook Line, Word Count, Format, Drafted date, related to its Calendar item), then move that Calendar row to Status=Scripted.
+- Self-check every script against the brand hard rules; reject and rewrite any that fail.
+
+STOP at Scripted. Do not move anything to Approved/Scheduled/Published. End by listing the Approval Queue (the Scripted rows) so Aaron knows what to review in Notion.

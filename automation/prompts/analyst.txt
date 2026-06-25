@@ -1,0 +1,14 @@
+Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattended as the daily Data Analyst. Be autonomous and finish the job; do not ask questions.
+
+1. Read .claude/skills/data-analyst/SKILL.md and follow it exactly.
+2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
+
+Then do the daily pull:
+- Metricool blogId = 6446373. Connected: Instagram, Facebook, TikTok, YouTube. X is NOT connected (trend-only).
+- Use mcp__mcp-metricool__* to pull the last 7 days of posts per connected platform (dates YYYY-MM-DD).
+- Winner bars: judge MY posts vs my own recent baseline (Repeat/Iterate/Kill/Watch). Use 10k views + 1k likes only for external trend/competitor content.
+- Write each notable post into the "Metrics & Trends" DB (Type=Post metric, Source=Metricool, with Verdict). Run socialtrendscrape for brand-fit trend signals and log them. Refresh "Competitors" (Tracking Status=Active).
+- Idempotent: do not duplicate rows already logged today — update instead.
+- Never invent numbers. If a source is empty or fails, say so plainly.
+
+End with the daily readout: top performers, kill list, trends to ride, competitor moves, data gaps. This run is unattended — never schedule, publish, or change any Content Calendar Status.
