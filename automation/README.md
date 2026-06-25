@@ -16,8 +16,8 @@ cloud Analyst would have no metrics. Hence everything here is local.
 | Job | Schedule (Europe/London) | What it does | Publishes? |
 |---|---|---|---|
 | `analyst`   | Daily 07:00 | Pull metrics → Metrics & Trends; trends; competitors | no |
-| `publisher` | Daily 07:30 | Schedule any `Approved` Calendar rows → `Scheduled` | **yes — Approved only** |
-| `creative`  | Mon 06:30   | Strategist → Ideator → Scripter → stop at Approval Queue | no |
+| `publisher` | Daily 07:30 | Create Metricool **drafts** from `Approved` rows → `Scheduled` (= drafted) | no — drafts only; you publish |
+| `creative`  | Mon 06:30   | Strategist → Ideator → Scripter → Carousel slides → stop at Approval Queue | no |
 | `reporting` | Sun 18:00   | Head of Content rolls up the week → Brief `Delivered` | no |
 
 Each job = `prompts/<job>.txt` (the instruction) + `settings/<job>.settings.json`
@@ -25,23 +25,25 @@ Each job = `prompts/<job>.txt` (the instruction) + `settings/<job>.settings.json
 `run-job.sh`. Logs land in `logs/<job>-<timestamp>.log` (`<job>-latest.log` points
 at the newest). A macOS notification fires when each job finishes.
 
-## The approval gate
-- `creative` **stops at `Scripted`** — it never sets `Approved`.
-- `publisher` **only touches `Approved`** rows and never publishes to **X**.
-- You review the Approval Queue in Notion and flip winners to `Approved` yourself.
+## The approval gate (now two)
+- `creative` **stops at `Scripted`** (and renders carousel slides) — it never sets `Approved`.
+- `publisher` **only touches `Approved`** rows and only ever creates **drafts**
+  (`autoPublish: false`) — it never auto-publishes anything, including X.
+- You review the Approval Queue in Notion and flip winners to `Approved` yourself
+  (gate 1), then review the real composed post in Metricool and hit publish (gate 2).
 - The `analyst`, `creative`, and `reporting` settings files **deny** the Metricool
-  scheduler tools outright, so they physically cannot publish.
+  scheduler tools outright, so they physically cannot touch the scheduler.
 
 ## Install
 ```bash
 cd /Users/aaronhopkins/coachforge-marketing-team/automation
 
 ./install.sh                  # analyst + creative + reporting (nothing publishes)
-./install.sh --with-publisher # also enable the daily publisher (real scheduling)
+./install.sh --with-publisher # also enable the daily draft-builder (drafts only)
 ./install.sh --wake           # also set a 06:25 daily wake-from-sleep (sudo)
 ```
-The **publisher is opt-in**. Leave it off until you've watched one scheduling run
-and trust it; then re-run with `--with-publisher`.
+The **publisher is opt-in**. Leave it off until you've watched one draft run and
+trust it; then re-run with `--with-publisher`. Even on, it only ever creates drafts.
 
 ## Run a job by hand (recommended first step)
 Watch one run live before trusting the schedule:
@@ -49,7 +51,7 @@ Watch one run live before trusting the schedule:
 ./run-job.sh analyst      # safe: reads metrics, writes Metrics & Trends
 tail -f logs/analyst-latest.log
 ```
-`publisher` will schedule real posts for Approved rows — only run it when ready.
+`publisher` creates Metricool drafts for Approved rows (never publishes) — but only run it when ready.
 
 ## Sleep / power
 - A **sleeping** Mac can run these if it wakes for them. A **powered-off** Mac can't.

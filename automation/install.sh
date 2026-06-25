@@ -38,7 +38,7 @@ for job in "${JOBS[@]}"; do
 done
 
 if [ "$WITH_PUBLISHER" -eq 0 ]; then
-  echo "skipped com.coachforge.publisher.plist  (run with --with-publisher to enable real scheduling)"
+  echo "skipped com.coachforge.publisher.plist  (run with --with-publisher to enable the draft-builder)"
 fi
 
 if [ "$SET_WAKE" -eq 1 ]; then

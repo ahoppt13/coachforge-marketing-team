@@ -3,12 +3,13 @@ Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattende
 1. Read .claude/skills/publishing-manager/SKILL.md and follow it EXACTLY, including every hard rule.
 2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
 
-Then do the scheduling run:
+Then do the draft run (DRAFT MODE — you never publish anything live):
 - Take ONLY Content Calendar rows where Status is exactly "Approved". This is the human gate — if a row is not Approved, it is not yours to touch. Never set a row to Approved yourself.
-- For each Approved row, schedule its connected Platform(s) at its Publish Date via the Metricool scheduler (blog_id = 6446373, timezone Europe/London). Check the existing queue first (get_scheduled_posts) so you never double-schedule.
+- For each Approved row, create a Metricool DRAFT for its connected Platform(s) at its Publish Date via the scheduler (blog_id = 6446373, timezone Europe/London). Set the draft/auto-publish flag so it lands as a draft and NEVER auto-publishes (autoPublish: false, and draft: true; confirm which key takes on the first draft and report it). Aaron reviews and publishes in Metricool — that is the go-live gate. Check the existing queue first (get_scheduled_posts) so you never double-create.
+- Carousels: the slides are local PNGs (carousel/out/<slug>/slide-*.png). Metricool needs a fetchable URL per image — if you don't have hosted URLs, create the draft with caption + hashtags and note that the PNGs must be attached in the Metricool composer at review. NEVER invent a media URL. Video rows: draft the caption/title/hashtags and flag that Aaron attaches the video before publishing.
 - X (Twitter) IS connected — schedule it like any other platform, but its post text must be ≤ 280 characters and must never be split into a thread. If the row's caption is longer, write an X-specific version (lead with the hook, keep the link, cut the rest). If you can't get it under 280, leave X unscheduled and flag it — never truncate into nonsense.
 - Honour every media requirement; if required media is missing, do not schedule that platform — flag it, leave the row Approved.
-- After a row's intended platforms are all queued, set that row's Status to "Scheduled". Partial rows stay "Approved" with a Notes line.
-- Never fabricate a media URL, a time, or a Live Link. Do NOT use update_schedule_post (that needs human confirmation).
+- After a row's intended platforms are all staged as drafts, set that row's Status to "Scheduled" (which in draft mode means "drafted in Metricool, awaiting Aaron's publish"). Partial rows stay "Approved" with a Notes line.
+- Never fabricate a media URL, a time, or a Live Link. Do NOT use update_schedule_post (that needs human confirmation). Never create an auto-publishing post — drafts only.
 
-End with the run summary: Scheduled, Skipped X (only if it couldn't fit 280 chars), Blocked, Status changes made, Needs Aaron. This run is unattended — only act on Approved rows.
+End with the run summary: Drafted in Metricool, Attach at review (carousel PNG paths / videos), Skipped X (only if it couldn't fit 280 chars), Blocked, Status changes made, Needs Aaron. This run is unattended — only act on Approved rows, and only ever create drafts.

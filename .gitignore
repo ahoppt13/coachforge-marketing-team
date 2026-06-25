@@ -9,3 +9,6 @@ config/credentials*
 # Automation run logs (keep the dir, not the logs)
 automation/logs/*
 !automation/logs/.gitkeep
+
+# Rendered carousel PNGs (generated artifacts — keep the renderer, not the output)
+carousel/out/

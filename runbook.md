@@ -12,19 +12,21 @@ prompts for each agent, plus how to manage sessions.
 | 1 | Data Analyst | `data-analyst` | Pull daily metrics (IG/FB/TikTok/YouTube) via Metricool + trends via socialtrendscrape → Metrics & Trends; flag Repeat/Iterate/Kill/Watch |
 | 2 | Content Strategist | `content-strategist` | Read the data → set weekly content mix, CTAs, pillar focus → draft Weekly Brief |
 | 3 | Ideator | `ideator` | 30+ ideas → lock 7 → Content Calendar (Status=Idea) |
-| 4 | Scripter | `scripter` | Filming-ready scripts → Scripts DB → move posts to Scripted (your Approval Queue) |
-| 5 | Publishing Manager | `publishing-manager` | Schedule **Approved** posts via Metricool → Scheduled → Published |
+| 4 | Scripter | `scripter` | Filming-ready scripts + caption + 5 hashtags → Scripts DB → move posts to Scripted (your Approval Queue) |
+| 4b | Carousel Builder | `carousel-builder` | Turn carousel scripts into on-brand PNG slides via `carousel/render.py` (obsidian/amber/Cormorant) |
+| 5 | Publishing Manager | `publishing-manager` | Push **Approved** posts to Metricool as **drafts** (never auto-publish) → you review + publish in Metricool |
 | 6 | Head of Content | `head-of-content` | Roll the week's results into the Weekly Brief: Top Performer + Kill List → Delivered; move reported posts to Reported |
 
 ## Weekly run order
 
 ```
-run the analyst → Strategist → Ideator → Scripter
+run the analyst → Strategist → Ideator → Scripter → Carousel Builder (slides)
         → YOU review the Approval Queue in Notion, move winners to "Approved"
-        → Publishing Manager schedules the Approved posts
+        → Publishing Manager pushes the Approved posts to Metricool as DRAFTS
+        → YOU review the real composed post in Metricool, attach video/slides, hit publish
 ```
 
-**The human gate:** nothing moves past `Approved` without you. That status change is yours alone.
+**The human gate (now two):** (1) nothing reaches Metricool until you move a Notion row to `Approved` — yours alone; (2) nothing goes live until you publish the draft in Metricool. The automation only ever creates drafts — it never publishes.
 
 ---
 
@@ -34,6 +36,8 @@ run the analyst → Strategist → Ideator → Scripter
 - Metricool MCP server: installed, **user scope**, tools = `mcp__mcp-metricool__*`
 - Metricool brand `coachforge.ai`, blogId **6446373**. Connected: Instagram, Facebook, TikTok, YouTube, **X (Twitter)**. X is now connected — it's publishable (keep its text ≤ 280 chars, no auto-thread) and the analyst pulls its metrics via `get_x_posts`.
 - Secrets in `config/.env` (gitignored). Server creds live in `~/.claude.json` (not in repo).
+- Carousel slides: `carousel/render.py` (headless Chrome → 1080×1350 PNGs, on-brand). Output under `carousel/out/` (gitignored). Hashtag rule: `brand/hashtag-bank.md` (5 per post).
+- Publishing is **draft-mode**: the publisher creates Metricool drafts (`autoPublish: false`); you publish from Metricool. Metricool's MCP has no media-upload tool, so carousel/video media is attached in the Metricool composer at review (don't fake a hosted URL).
 - Winner bars: **own posts** judged vs your own recent baseline; **external** content uses 10k views + 1k likes.
 
 ---
@@ -185,20 +189,22 @@ Everything is local (the Metricool MCP is a local binary, so cloud routines can'
 | Job | When (Europe/London) | Publishes? |
 |---|---|---|
 | `analyst`   | Daily 07:00 | no |
-| `publisher` | Daily 07:30 | yes — **Approved only**, opt-in |
-| `creative`  | Mon 06:30   | no — stops at Approval Queue |
+| `publisher` | Daily 07:30 | no — creates Metricool **drafts** from Approved rows; you publish |
+| `creative`  | Mon 06:30   | no — stops at Approval Queue (renders carousel slides) |
 | `reporting` | Sun 18:00   | no |
 
 ```bash
 cd automation
-./install.sh                  # analyst + creative + reporting (nothing publishes)
-./install.sh --with-publisher # also enable real scheduling of Approved rows
+./install.sh                  # analyst + creative + reporting
+./install.sh --with-publisher # also enable the draft-builder for Approved rows
 ./run-job.sh analyst          # run one by hand; tail logs/analyst-latest.log
+./run-job.sh creative         # whole creative chain on demand (Strategist→Ideator→Scripter→slides)
 ```
 
-The approval gate holds: `creative` stops at `Scripted`, `publisher` only touches
-`Approved` rows (X now included, ≤280 chars/no-thread), and the non-publishing jobs
-are denied the Metricool scheduler tools outright. You alone move a row to `Approved`.
+The approval gate holds: `creative` stops at `Scripted` (+ rendered slides), `publisher`
+only touches `Approved` rows and only ever creates **drafts** (never auto-publishes; X
+included, ≤280/no-thread), and the non-publishing jobs are denied the Metricool scheduler
+tools outright. You alone move a row to `Approved`, and you alone publish from Metricool.
 
 ## What's left
 

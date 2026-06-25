@@ -18,4 +18,9 @@ STEP 3 — Scripter.
 - For every Status=Idea row you just created, write a full filming-ready script. Create a "Scripts" row (Script Status=Draft, full script in page body, Hook Line, Word Count, Format, Drafted date, related to its Calendar item), then move that Calendar row to Status=Scripted.
 - Self-check every script against the brand hard rules; reject and rewrite any that fail.
 
-STOP at Scripted. Do not move anything to Approved/Scheduled/Published. End by listing the Approval Queue (the Scripted rows) so Aaron knows what to review in Notion.
+STEP 4 — Carousel slides (for Format=Carousel rows only).
+- Read .claude/skills/carousel-builder/SKILL.md and follow it.
+- For each Scripted carousel, turn the script's per-slide copy into a spec JSON and render on-brand PNGs: python3 carousel/render.py --spec carousel/<slug>.json --out carousel/out/<slug>
+- Spot-check the cover + one content slide for overflow/typos; shorten and re-render if text clips. Report the PNG paths (carousel/out/<slug>/) in the handoff so they can be attached to the Metricool draft at review. Do NOT host or schedule anything.
+
+STOP at Scripted (with carousel PNGs rendered where applicable). Do not move anything to Approved/Scheduled/Published. End by listing the Approval Queue (the Scripted rows, noting which have slides rendered and where) so Aaron knows what to review in Notion.
