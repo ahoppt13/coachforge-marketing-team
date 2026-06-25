@@ -4,8 +4,8 @@ Work in /Users/aaronhopkins/coachforge-marketing-team. You are running unattende
 2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
 
 Then do the daily pull:
-- Metricool blogId = 6446373. Connected: Instagram, Facebook, TikTok, YouTube. X is NOT connected (trend-only).
-- Use mcp__mcp-metricool__* to pull the last 7 days of posts per connected platform (dates YYYY-MM-DD).
+- Metricool blogId = 6446373. Connected: Instagram, Facebook, TikTok, YouTube, X (Twitter). Confirm the live list with get_brands first.
+- Use mcp__mcp-metricool__* to pull the last 7 days of posts per connected platform, including X via get_x_posts (dates YYYY-MM-DD).
 - Winner bars: judge MY posts vs my own recent baseline (Repeat/Iterate/Kill/Watch). Use 10k views + 1k likes only for external trend/competitor content.
 - Write each notable post into the "Metrics & Trends" DB (Type=Post metric, Source=Metricool, with Verdict). Run socialtrendscrape for brand-fit trend signals and log them. Refresh "Competitors" (Tracking Status=Active).
 - Idempotent: do not duplicate rows already logged today — update instead.

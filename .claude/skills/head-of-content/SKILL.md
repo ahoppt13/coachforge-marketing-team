@@ -45,7 +45,7 @@ End with a tight summary for Aaron:
 - **Top Performer:** the post + the lesson to repeat.
 - **Kill List:** the misses + what to drop or fix.
 - **Feeds next week:** the one or two things the Strategist should weight (do more of X, stop Y).
-- **Data gaps:** anything missing (e.g. "TikTok numbers not in yet", "X: trend-only, never measured").
+- **Data gaps:** anything missing (e.g. "TikTok numbers not in yet", "X: no posts in window").
 
 ## Hard rules
 - Never invent a metric, a winner, or a lesson. Thin data → report thin data.

@@ -32,7 +32,7 @@ run the analyst → Strategist → Ideator → Scripter
 
 - Project dir: `/Users/aaronhopkins/coachforge-marketing-team`
 - Metricool MCP server: installed, **user scope**, tools = `mcp__mcp-metricool__*`
-- Metricool brand `coachforge.ai`, blogId **6446373**. Connected: Instagram, Facebook, TikTok, YouTube. **X = not connected (trend-only).**
+- Metricool brand `coachforge.ai`, blogId **6446373**. Connected: Instagram, Facebook, TikTok, YouTube, **X (Twitter)**. X is now connected — it's publishable (keep its text ≤ 280 chars, no auto-thread) and the analyst pulls its metrics via `get_x_posts`.
 - Secrets in `config/.env` (gitignored). Server creds live in `~/.claude.json` (not in repo).
 - Winner bars: **own posts** judged vs your own recent baseline; **external** content uses 10k views + 1k likes.
 
@@ -58,10 +58,10 @@ Work in /Users/aaronhopkins/coachforge-marketing-team. Run the Data Analyst.
 2. Also read config/notion-workspace.md and brand/brand-voice-profile.md.
 
 Then do the pull:
-- Metricool blogId = 6446373. Connected: Instagram, Facebook, TikTok, YouTube.
-  X is NOT connected (trend-only).
+- Metricool blogId = 6446373. Connected: Instagram, Facebook, TikTok, YouTube,
+  X (Twitter). Confirm the live list with get_brands.
 - Use mcp__mcp-metricool__* to pull the last 7 days of posts per connected
-  platform (dates YYYY-MM-DD).
+  platform, including X via get_x_posts (dates YYYY-MM-DD).
 - Winner bars: judge MY posts vs my own recent baseline (Repeat/Iterate/Kill/
   Watch). Use 10k views + 1k likes only for external trend/competitor content.
 - Write each notable post into the "Metrics & Trends" DB (Type=Post metric,
@@ -149,7 +149,7 @@ Build .claude/skills/publishing-manager/SKILL.md. It must:
   scheduler tools (mcp__mcp-metricool__* ; /v2/scheduler/posts). blogId = 6446373.
 - After scheduling set Status=Scheduled; once live set Published + fill Live Link.
 - DM-funnel auditing stays a manual weekly checklist (DM data is locked down).
-- Never publish to X (not connected).
+- X (Twitter) is connected — schedule it too, but keep its text ≤ 280 chars and never auto-thread.
 Then dry-run the scheduler (don't publish live without my OK) and commit the skill.
 ```
 
@@ -197,8 +197,8 @@ cd automation
 ```
 
 The approval gate holds: `creative` stops at `Scripted`, `publisher` only touches
-`Approved` rows and never posts to X, and the non-publishing jobs are denied the
-Metricool scheduler tools outright. You alone move a row to `Approved`.
+`Approved` rows (X now included, ≤280 chars/no-thread), and the non-publishing jobs
+are denied the Metricool scheduler tools outright. You alone move a row to `Approved`.
 
 ## What's left
 
