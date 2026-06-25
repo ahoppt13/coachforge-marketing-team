@@ -14,7 +14,7 @@ prompts for each agent, plus how to manage sessions.
 | 3 | Ideator | `ideator` | 30+ ideas → lock 7 → Content Calendar (Status=Idea) |
 | 4 | Scripter | `scripter` | Filming-ready scripts → Scripts DB → move posts to Scripted (your Approval Queue) |
 | 5 | Publishing Manager | `publishing-manager` | Schedule **Approved** posts via Metricool → Scheduled → Published |
-| 6 | Head of Content | (Phase 4) | Roll reporting into one Weekly Brief; run the pipeline on a clock |
+| 6 | Head of Content | `head-of-content` | Roll the week's results into the Weekly Brief: Top Performer + Kill List → Delivered; move reported posts to Reported |
 
 ## Weekly run order
 
@@ -153,9 +153,30 @@ Build .claude/skills/publishing-manager/SKILL.md. It must:
 Then dry-run the scheduler (don't publish live without my OK) and commit the skill.
 ```
 
+### 6 — Head of Content (end of week)
+
+```
+Work in /Users/aaronhopkins/coachforge-marketing-team. Run the Head of Content.
+
+Read .claude/skills/head-of-content/SKILL.md and follow it exactly. Also read
+config/notion-workspace.md and brand/brand-voice-profile.md.
+
+Task:
+- Find THIS week's "Weekly Brief" row (the one the Strategist opened as Draft).
+  Complete that same row — do not create a new one.
+- Read this week's "Metrics & Trends" (Type=Post metric + Verdict) and the
+  "Content Calendar" rows that reached Status=Published this week.
+- Pick the Top Performer (post + proof number + reusable lesson) and build the
+  Kill List (underperformers + reason + drop/retry). No standout? Say so.
+- Fill Top Performer + Kill List, relate the week's posts via Related Content,
+  put a scannable results readout in the page body, set Status=Delivered.
+- Move each reported Content Calendar row Published -> Reported.
+- Never invent a metric or a winner. Thin data = report thin data.
+- Finish with the verdict, top performer, kill list, what feeds next week, gaps.
+```
+
 ---
 
-## What's left after Phase 3
+## What's left after Phase 4
 
-- **Phase 4 — Head of Content:** roll all reporting into one Weekly Brief; complete Top Performer + Kill List; mark Delivered.
 - **Phase 5 — Automation:** daily cron for the Analyst, weekly cron for the pipeline. Keep the human approval gate.
