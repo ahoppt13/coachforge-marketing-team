@@ -1,0 +1,56 @@
+{
+  "handle": "@coachforge.ai",
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Busywork agitation",
+      "headline": "You didn't train as a coach to write captions.",
+      "footer": "Swipe →"
+    },
+    {
+      "type": "content",
+      "kicker": "01",
+      "headline": "Where the week actually goes",
+      "body": [
+        "Captions. DMs. Scheduling. Repurposing.",
+        "None of it is coaching.",
+        "It quietly adds up to a day a week."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "02",
+      "headline": "The hidden cost",
+      "body": [
+        "Every admin hour is an hour you're not coaching, selling, or resting.",
+        "So you feel busy and behind at the same time."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "03",
+      "headline": "The fix isn't a longer day",
+      "body": [
+        "You don't need more hours.",
+        "You need the repeatable work off your plate.",
+        "That's a system job, not a you job."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "04",
+      "headline": "Hand the repeatable parts to AI",
+      "body": [
+        "Set Claude up once with your offer and tone.",
+        "Captions, replies, repurposing — drafted in minutes.",
+        "Still in your voice. You just edit."
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Get the admin off your plate.",
+      "subtext": "The starter prompts are in the AI Admin guide.",
+      "cta": "Comment ADMIN"
+    }
+  ]
+}

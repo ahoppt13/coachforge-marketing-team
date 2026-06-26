@@ -1,0 +1,67 @@
+{
+  "handle": "@coachforge.ai",
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Prompt shortcuts",
+      "headline": "5 prompts that run your coaching admin.",
+      "footer": "Swipe →"
+    },
+    {
+      "type": "content",
+      "kicker": "01",
+      "headline": "The caption prompt",
+      "body": [
+        "\"Turn these bullet points into a caption in my voice.",
+        "Hook first, one idea, a soft CTA.\"",
+        "A blank page becomes a draft."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "02",
+      "headline": "The DM prompt",
+      "body": [
+        "\"Here's a message. Give me three on-brand replies —",
+        "warm, short, no pitch.\"",
+        "Clear the inbox without the dread."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "03",
+      "headline": "The repurpose prompt",
+      "body": [
+        "\"Turn this post into a 30-second video script",
+        "and two short posts for X.\"",
+        "One idea, three places."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "04",
+      "headline": "The boundary prompt",
+      "body": [
+        "\"A client said this. Draft a kind, honest reply",
+        "that still holds my boundary.\"",
+        "Hard messages, handled calmly."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "05",
+      "headline": "The planning prompt",
+      "body": [
+        "\"Here's my offer. Give me five content angles",
+        "for this week, one per pillar.\"",
+        "Never start the week from zero."
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Want them as a pack?",
+      "subtext": "Saved and ready in the Prompt Pack.",
+      "cta": "Comment PROMPTS"
+    }
+  ]
+}

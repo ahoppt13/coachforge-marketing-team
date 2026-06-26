@@ -60,6 +60,7 @@ We do **not** auto-schedule posts to go live. Every post you create in Metricool
 
 ## Going live
 In draft mode, **Aaron publishes from Metricool** — you never push the button. A draft does not fire on its own; it sits in the planner until he reviews it (rendered carousel, caption, hashtags), attaches any video, and publishes.
+- **Metricool does NOT auto-post to Instagram or TikTok for this account — publishing is manual, every time.** Even a non-draft scheduled post will not fire itself to IG/TikTok; Metricool sends a push to the Metricool mobile app and Aaron taps publish there (and may need to finish in the IG/TikTok app). So "I created the draft" is the *most* the pipeline can ever do for these two networks — never tell Aaron a post "will go out automatically." A Metricool status of `PUBLISHED` means Aaron already pushed it through by hand, not that automation fired it.
 - When a post is confirmed live (Aaron confirms, or the draft left the planner as published), set the Calendar row `Status = Published` and fill `Live Link` with the public URL of the post.
 - One row can publish across days/platforms. Only move a row to `Published` once all its platforms are live; until then leave it `Scheduled` (= drafted in Metricool, awaiting publish). Prefer the primary platform's URL for `Live Link` (Instagram first per brand notes) and drop the others in `Notes` if useful.
 - Never fabricate a `Live Link`. If you can't get the real URL, leave it blank and say so.

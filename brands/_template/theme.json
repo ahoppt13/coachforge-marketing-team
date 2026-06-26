@@ -1,0 +1,15 @@
+{
+  "bg": "#070B14",
+  "card": "#0B1628",
+  "border": "#1A2F52",
+  "accent": "#E8930C",
+  "accent_hover": "#F5A832",
+  "text": "#F2EDE4",
+  "muted": "#6B80A3",
+  "font_import": "@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');",
+  "display": "'Cormorant Garamond', Georgia, serif",
+  "body": "'DM Sans', -apple-system, Helvetica, Arial, sans-serif",
+  "brandmark_html": "Brand<b>Name</b>",
+  "card_border": true,
+  "accent_shape": "square"
+}

@@ -1,0 +1,57 @@
+{
+  "handle": "@coachforge.ai",
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Business receipts",
+      "headline": "What 30 days of AI leverage actually looks like.",
+      "footer": "Swipe →"
+    },
+    {
+      "type": "content",
+      "kicker": "01",
+      "headline": "Week 1 — Set up once",
+      "body": [
+        "Your offer, your tone, your client — saved as a Project.",
+        "One evening of setup.",
+        "Everything after gets easier."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "02",
+      "headline": "Week 2 — Captions stop being a chore",
+      "body": [
+        "Drafts arrive in your voice.",
+        "Minutes, not a lost afternoon.",
+        "You edit instead of stare."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "03",
+      "headline": "Week 3 — DMs cleared daily",
+      "body": [
+        "Three on-brand replies on tap.",
+        "The inbox stops being a wall.",
+        "Conversations actually move."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "04",
+      "headline": "Week 4 — A full day back",
+      "body": [
+        "The repeatable work runs itself.",
+        "You coach, you sell, you rest.",
+        "Same business, more of you in it."
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Want the same 30 days?",
+      "subtext": "The roadmap is in the AI Leverage guide.",
+      "cta": "Comment LEVERAGE"
+    }
+  ]
+}

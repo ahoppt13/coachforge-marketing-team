@@ -1,0 +1,47 @@
+{
+  "handle": "@coachforge.ai",
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Prompt shortcuts",
+      "headline": "Run your coaching business from your phone.",
+      "footer": "Swipe →"
+    },
+    {
+      "type": "content",
+      "kicker": "01",
+      "headline": "Tell Claude who you are first",
+      "body": [
+        "Paste your offer, your tone, your client.",
+        "Save it once as a Project.",
+        "Every reply now sounds like you."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "02",
+      "headline": "Voice-note the idea on a walk",
+      "body": [
+        "No laptop. No blank page.",
+        "Claude shapes the ramble into a caption.",
+        "You tighten the hook."
+      ]
+    },
+    {
+      "type": "content",
+      "kicker": "03",
+      "headline": "Clear the DMs without the dread",
+      "body": [
+        "Drop the message in.",
+        "Get three on-brand replies.",
+        "Pick one. Send. Move on."
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Set it up once. Run it from your pocket.",
+      "subtext": "The full walkthrough is in the AI Phone guide.",
+      "cta": "Comment PHONE"
+    }
+  ]
+}
