@@ -93,6 +93,7 @@ Inside the products: calmer, instructive, patient without being patronising. Tre
 ## 8. Platform notes
 - **Instagram first.** Carousel-driven. Every post starts on obsidian. Heavy amber type on dark. Real product screenshots are the dominant visual.
 - Captions in Register 1 — but everyday feed posts are *not* full sales-page tone; save that for promo sequences.
+- **X (Twitter):** **daily** — one post every day, ≤280 chars, single post (never a thread). Lead with the hook, close with a **Gumroad link** (phone-walkthrough link for phone-setup posts, profile link otherwise — see `config/offers-and-links.md`). The link replaces the "Comment KEYWORD" CTA on X; keep keyword CTAs on IG/TikTok/FB. X is the one network that auto-publishes.
 - **Email:** plain-text first, no banner, weekly cadence, sign off "— CoachForge AI".
 - **Gumroad:** Register 1 but tighter; buyers scan. Lead with deliverable → price → what's inside → proof.
 
